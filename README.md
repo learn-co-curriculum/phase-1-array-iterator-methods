@@ -101,7 +101,7 @@ blueFilter(users);
 ```
 
 But what if we wanted to print out users whose favorite color is red instead?
-With the above approach we'd need to create a whole new `redFilter` function.
+With the above approach, we'd need to create a whole new `redFilter` function.
 
 We can improve matters by abstracting out the color into a variable:
 
