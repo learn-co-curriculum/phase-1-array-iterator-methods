@@ -19,47 +19,49 @@ Imagine that we have a collection of Flatbook user objects in an array:
 ```js
 const users = [
   {
-    firstName: 'Niky',
-    lastName: 'Morgan',
-    favoriteColor: 'Blue',
-    favoriteAnimal: 'Jaguar',
-    personalQuote: "You're never too old to learn something new"
+    firstName: "Niky",
+    lastName: "Morgan",
+    favoriteColor: "Blue",
+    favoriteAnimal: "Jaguar",
+    personalQuote: "You're never too old to learn something new",
   },
   {
-    firstName: 'Tracy',
-    lastName: 'Lum',
-    favoriteColor: 'Yellow',
-    favoriteAnimal: 'Penguin',
-    personalQuote: "I just got lost in thought - it was unfamiliar territory"
+    firstName: "Tracy",
+    lastName: "Lum",
+    favoriteColor: "Yellow",
+    favoriteAnimal: "Penguin",
+    personalQuote: "I just got lost in thought - it was unfamiliar territory",
   },
   {
-    firstName: 'Josh',
-    lastName: 'Rowley',
-    favoriteColor: 'Blue',
-    favoriteAnimal: 'Penguin',
-    personalQuote: "Always remember you’re unique, just like everyone else"
+    firstName: "Josh",
+    lastName: "Rowley",
+    favoriteColor: "Blue",
+    favoriteAnimal: "Penguin",
+    personalQuote: "Always remember you’re unique, just like everyone else",
   },
   {
-    firstName: 'Kate',
-    lastName: 'Travers',
-    favoriteColor: 'Red',
-    favoriteAnimal: 'Jaguar',
-    personalQuote: "Behind every great man is a woman rolling her eyes"
+    firstName: "Kate",
+    lastName: "Travers",
+    favoriteColor: "Red",
+    favoriteAnimal: "Jaguar",
+    personalQuote: "Behind every great man is a woman rolling her eyes",
   },
   {
-    firstName: 'Avidor',
-    lastName: 'Turkewitz',
-    favoriteColor: 'Blue',
-    favoriteAnimal: 'Penguin',
-    personalQuote: "You don’t have to see the whole staircase, just take the first step"
+    firstName: "Avidor",
+    lastName: "Turkewitz",
+    favoriteColor: "Blue",
+    favoriteAnimal: "Penguin",
+    personalQuote:
+      "You don’t have to see the whole staircase, just take the first step",
   },
   {
-    firstName: 'Drew',
-    lastName: 'Price',
-    favoriteColor: 'Yellow',
-    favoriteAnimal: 'Elephant',
-    personalQuote: "Failure is not the opposite of success: it’s part of success"
-  }
+    firstName: "Drew",
+    lastName: "Price",
+    favoriteColor: "Yellow",
+    favoriteAnimal: "Elephant",
+    personalQuote:
+      "Failure is not the opposite of success: it’s part of success",
+  },
 ];
 ```
 
@@ -67,7 +69,7 @@ We can iterate over that collection and print out everyone's first name as
 follows:
 
 ```js
-function firstNamePrinter (collection) {
+function firstNamePrinter(collection) {
   for (const user of collection) {
     console.log(user.firstName);
   }
@@ -86,9 +88,9 @@ It's also not too difficult to print out only users whose favorite color is
 blue:
 
 ```js
-function blueFilter (collection) {
+function blueFilter(collection) {
   for (const user of collection) {
-    if (user.favoriteColor === 'Blue') {
+    if (user.favoriteColor === "Blue") {
       console.log(user.firstName);
     }
   }
@@ -106,7 +108,7 @@ With the above approach, we'd need to create a whole new `redFilter` function.
 We can improve matters by abstracting out the color into a variable:
 
 ```js
-function colorFilter (collection, color) {
+function colorFilter(collection, color) {
   for (const user of collection) {
     if (user.favoriteColor === color) {
       console.log(user.firstName);
@@ -114,7 +116,7 @@ function colorFilter (collection, color) {
   }
 }
 
-colorFilter(users, 'Red');
+colorFilter(users, "Red");
 // LOG: Kate
 ```
 
@@ -137,29 +139,12 @@ built in methods that reduce our need to write the common parts of the process
 over and over again. Below is a summary of some common use cases and the
 JavaScript method(s) we can use for each:
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>Use Case</th>
-    <th>Method</th>
-  </tr>
-  
-  <tr>
-    <td>Finding a single element that meets a condition</td>
-    <td><code>indexOf()</code>, <code>find()</code></td>
-  </tr>
-  <tr>
-    <td>Finding and returning a list of elements that meet a condition</td>
-    <td><code>filter()</code></td>
-  </tr>
-  <tr>
-    <td>Modifying each element and returning the modified array</td>
-    <td><code>map()</code></td>
-  </tr>
-    <tr>
-    <td>Creating a summary or aggregation of values in an array</td>
-    <td><code>reduce()</code></td>
-  </tr>
-</table>
+| Use Case                                                       | Method                |
+| -------------------------------------------------------------- | --------------------- |
+| Finding a single element that meets a condition                | `indexOf()`, `find()` |
+| Finding and returning a list of elements that meet a condition | `filter()`            |
+| Modifying each element and returning the modified array        | `map()`               |
+| Creating a summary or aggregation of values in an array        | `reduce()`            |
 
 We will learn about each of the above methods in the upcoming lessons.
 
@@ -167,4 +152,3 @@ We will learn about each of the above methods in the upcoming lessons.
 
 - MDN
   - [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-  
