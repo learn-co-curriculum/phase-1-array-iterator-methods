@@ -2,15 +2,15 @@
 
 ## Learning Goals
 
-- Understand how JavaScript's iterator methods help us
+- Learn how JavaScript's iterator methods help us
 
 ## Introduction
 
 We've learned about `Array` methods that allow us to modify arrays by adding and
 removing elements (`push()`, `slice()`, etc). These methods operate on the array
-as a whole, but JavaScript also includes methods that assist us in iterating
-through an array and interacting with each individual element in some way. We
-will be learning about these methods in the next few lessons.
+itself, but JavaScript also includes methods that assist us in iterating through
+an array and interacting with each individual element in some way. We will be
+learning about these methods in the next few lessons.
 
 ## Why Use JavaScript's Iterator Methods?
 
@@ -65,8 +65,8 @@ const users = [
 ];
 ```
 
-We can iterate over that collection and print out everyone's first name as
-follows:
+We can iterate over that collection and print out everyone's first name using a
+`for...of` loop:
 
 ```js
 function firstNamePrinter(collection) {
