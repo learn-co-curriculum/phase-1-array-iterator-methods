@@ -141,6 +141,7 @@ JavaScript method(s) we can use for each:
 
 | Use Case                                                       | Method                |
 | -------------------------------------------------------------- | --------------------- |
+| Execute a provided method for each element                     | `forEach()`           |
 | Finding a single element that meets a condition                | `indexOf()`, `find()` |
 | Finding and returning a list of elements that meet a condition | `filter()`            |
 | Modifying each element and returning the modified array        | `map()`               |
